@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: kirana-khata-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: APP_MODE
+        value: demo
+      - key: FRONTEND_ORIGIN
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: DATABASE_URL
+        value: sqlite:///./kirana_khata.db

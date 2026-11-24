@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --bg-canvas: #F7F4EE;
+  --bg-surface: #FFFFFF;
+  --bg-surface-muted: #FBF9F5;
+  --border-ledger: #E2DDD3;
+  --border-strong: #CFC8BA;
+
+  --text-primary: #173B3F;
+  --text-secondary: #4D6265;
+  --text-muted: #708284;
+
+  --brand-teal: #173B3F;
+  --brand-teal-hover: #112D30;
+  --accent-marigold: #D9911B;
+  --accent-terracotta: #C95534;
+  --accent-terracotta-hover: #B14829;
+  --status-green: #2F7D5B;
+  --status-red: #B84646;
+}
+
+@theme inline {
+  --color-background: var(--bg-canvas);
+  --color-foreground: var(--text-primary);
+  --font-sans: var(--font-dm-sans), var(--font-noto-kannada), system-ui, sans-serif;
+  --font-kannada: var(--font-noto-kannada), var(--font-dm-sans), sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #F7F4EE;
+  color: #173B3F;
+  font-family: var(--font-dm-sans), var(--font-noto-kannada), system-ui, -apple-system, sans-serif;
+  font-feature-settings: "tnum" 1, "cv05" 1;
+}
+
+.font-kannada {
+  font-family: var(--font-noto-kannada), var(--font-dm-sans), sans-serif;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subtle ledger scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1ECE2;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9C1B2;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A99F8D;
+}
