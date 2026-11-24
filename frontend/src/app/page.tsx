@@ -75,7 +75,7 @@ export default function OverviewPage() {
     void refreshNotifications();
   };
 
-  if (loading) return <LoadingBlock label="Opening Sri Lakshmi Kirana Stores..." />;
+  if (loading) return <LoadingBlock label="Opening Kirana Khata Agent..." />;
   if (error || !data) {
     return <ErrorBanner message={error || "Unable to load"} onRetry={() => void loadData()} />;
   }

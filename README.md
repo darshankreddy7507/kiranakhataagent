@@ -1,6 +1,6 @@
 # Kirana Khata Agent
 
-**Kirana Khata Agent** is an MCP-powered owner operations workbench for **Sri Lakshmi Kirana Stores** (*ಶ್ರೀ ಲಕ್ಷ್ಮೀ ಕಿರಾಣಾ ಸ್ಟೋರ್ಸ್*). Customers send WhatsApp orders in Kannada text or voice; the agent parses items, verifies stock and customer credit limits, proposes smart substitutes, drafts gentle staged UPI payment reminders, manages low-stock supplier reorders, and enforces explicit owner approval before updating inventory, khata, or sending WhatsApp replies.
+**Kirana Khata Agent** is an MCP-powered owner operations workbench (*ಕಿರಾಣಾ ಖಾತಾ ಏಜೆಂಟ್*). Customers send WhatsApp or Telegram orders in Kannada text or voice; the agent parses items, verifies stock and customer credit limits, proposes smart substitutes, drafts gentle staged UPI payment reminders, manages low-stock supplier reorders, and enforces explicit owner approval before updating inventory, khata, or sending replies.
 
 ---
 

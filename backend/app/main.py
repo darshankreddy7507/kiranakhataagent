@@ -32,7 +32,7 @@ settings = get_settings()
 
 app = FastAPI(
     title="Kirana Khata Agent API",
-    description="MCP-powered digital khata, inventory, and WhatsApp operations backend for Sri Lakshmi Kirana Stores.",
+    description="MCP-powered digital khata, inventory, and WhatsApp/Telegram operations backend for Kirana Khata Agent.",
     version="1.0.0",
     lifespan=lifespan,
 )

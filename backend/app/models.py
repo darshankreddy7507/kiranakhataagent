@@ -269,11 +269,11 @@ class ShopSettings(Base):
     __tablename__ = "shop_settings"
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, index=True)
-    shop_name: Mapped[str] = mapped_column(String(160), default="Sri Lakshmi Kirana Stores")
-    shop_name_kn: Mapped[str] = mapped_column(String(180), default="ಶ್ರೀ ಲಕ್ಷ್ಮೀ ಕಿರಾಣಾ ಸ್ಟೋರ್ಸ್")
+    shop_name: Mapped[str] = mapped_column(String(160), default="Kirana Khata Agent")
+    shop_name_kn: Mapped[str] = mapped_column(String(180), default="ಕಿರಾಣಾ ಖಾತಾ ಏಜೆಂಟ್")
     owner_name: Mapped[str] = mapped_column(String(120), default="Manjunath Gowda")
     owner_phone: Mapped[str] = mapped_column(String(24), default="+91 98450 11223")
-    upi_id: Mapped[str] = mapped_column(String(100), default="srilakshmikirana@okicici")
+    upi_id: Mapped[str] = mapped_column(String(100), default="kiranakhata@okicici")
     default_credit_limit: Mapped[float] = mapped_column(Float, default=3000.0)
     owner_pin: Mapped[str] = mapped_column(String(16), default="1234")
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, onupdate=utcnow)

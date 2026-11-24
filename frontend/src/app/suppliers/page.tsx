@@ -71,7 +71,7 @@ export default function SuppliersPage() {
           `• ${p.name_kn} (${p.name}): ${qtys[p.id] ?? p.default_reorder_qty} ${p.unit}`
       )
       .join("\n");
-    return `ನಮಸ್ಕಾರ ${activeSupplier.contact_person} ಅವರೆ (${activeSupplier.name_kn}).\nಶ್ರೀ ಲಕ್ಷ್ಮೀ ಕಿರಾಣಾ ಸ್ಟೋರ್ಸ್‌ಗೆ ಈ ಕೆಳಗಿನ ಸ್ಟಾಕ್ ಕಳಿಸಿ:\n${lines}\nದಯವಿಟ್ಟು ಬಿಲ್ ಜೊತೆ ಕಳಿಸಿ.`;
+    return `ನಮಸ್ಕಾರ ${activeSupplier.contact_person} ಅವರೆ (${activeSupplier.name_kn}).\nಕಿರಾಣಾ ಖಾತಾ ಏಜೆಂಟ್‌ಗೆ ಈ ಕೆಳಗಿನ ಸ್ಟಾಕ್ ಕಳಿಸಿ:\n${lines}\nದಯವಿಟ್ಟು ಬಿಲ್ ಜೊತೆ ಕಳಿಸಿ.`;
   }, [activeSupplier, supplierLowStock, qtys]);
 
   const draftMsgKn = editedDraftMsgKn ?? defaultDraftMsgKn;

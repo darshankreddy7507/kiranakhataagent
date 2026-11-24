@@ -17,9 +17,9 @@ const notoKannada = Noto_Sans_Kannada({
 });
 
 export const metadata: Metadata = {
-  title: "Kirana Khata Agent — Sri Lakshmi Kirana Stores",
+  title: "Kirana Khata Agent",
   description:
-    "MCP-powered digital khata, WhatsApp Kannada order inbox, and inventory approval workbench for Sri Lakshmi Kirana Stores.",
+    "MCP-powered digital khata, WhatsApp and Telegram Kannada order inbox, and inventory approval workbench for Kirana Khata Agent.",
 };
 
 export default function RootLayout({

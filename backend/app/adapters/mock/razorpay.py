@@ -16,9 +16,9 @@ class MockRazorpayUpiAdapter:
         safe_name = customer_name.replace(" ", "%20")
         return PaymentLinkResult(
             provider_link_id=f"plink_mock_{token}",
-            short_url=f"https://rzp.io/i/slks-{token}",
+            short_url=f"https://rzp.io/i/kka-{token}",
             upi_intent_uri=(
-                f"upi://pay?pa=srilakshmikirana@okicici&pn=Sri%20Lakshmi%20Kirana%20Stores"
+                f"upi://pay?pa=kiranakhata@okicici&pn=Kirana%20Khata%20Agent"
                 f"&am={amount:.2f}&cu=INR&tn=Khata%20{reference_id}%20{safe_name}"
             ),
             amount=round(amount, 2),

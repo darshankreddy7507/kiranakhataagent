@@ -1,4 +1,4 @@
-"""Deterministic realistic seed data for Sri Lakshmi Kirana Stores."""
+"""Deterministic realistic seed data for Kirana Khata Agent."""
 
 from datetime import datetime, timedelta, timezone
 from sqlalchemy.orm import Session
@@ -197,8 +197,8 @@ def seed_database_if_empty(db: Session) -> None:
     plink_ramesh = PaymentLink(
         link_code="plink_mock_ramesh01",
         customer_id=ramesh.id,
-        short_url="https://rzp.io/i/slks-ramesh",
-        upi_intent_uri="upi://pay?pa=srilakshmikirana@okicici&pn=Sri%20Lakshmi%20Kirana&am=3200.00&cu=INR",
+        short_url="https://rzp.io/i/kka-ramesh",
+        upi_intent_uri="upi://pay?pa=kiranakhata@okicici&pn=Kirana%20Khata%20Agent&am=3200.00&cu=INR",
         amount_requested=3200.0,
         amount_paid=0.0,
         status="sent",
@@ -208,8 +208,8 @@ def seed_database_if_empty(db: Session) -> None:
     plink_suresh_partial = PaymentLink(
         link_code="plink_mock_suresh01",
         customer_id=suresh.id,
-        short_url="https://rzp.io/i/slks-suresh",
-        upi_intent_uri="upi://pay?pa=srilakshmikirana@okicici&pn=Sri%20Lakshmi%20Kirana&am=2850.00&cu=INR",
+        short_url="https://rzp.io/i/kka-suresh",
+        upi_intent_uri="upi://pay?pa=kiranakhata@okicici&pn=Kirana%20Khata%20Agent&am=2850.00&cu=INR",
         amount_requested=2850.0,
         amount_paid=1000.0,
         status="partial",
@@ -220,8 +220,8 @@ def seed_database_if_empty(db: Session) -> None:
     plink_kumar = PaymentLink(
         link_code="plink_mock_kumar01",
         customer_id=kumar.id,
-        short_url="https://rzp.io/i/slks-kumar",
-        upi_intent_uri="upi://pay?pa=srilakshmikirana@okicici&pn=Sri%20Lakshmi%20Kirana&am=1200.00&cu=INR",
+        short_url="https://rzp.io/i/kka-kumar",
+        upi_intent_uri="upi://pay?pa=kiranakhata@okicici&pn=Kirana%20Khata%20Agent&am=1200.00&cu=INR",
         amount_requested=1200.0,
         amount_paid=0.0,
         status="sent",
@@ -231,8 +231,8 @@ def seed_database_if_empty(db: Session) -> None:
     plink_geetha = PaymentLink(
         link_code="plink_mock_geetha01",
         customer_id=geetha.id,
-        short_url="https://rzp.io/i/slks-geetha",
-        upi_intent_uri="upi://pay?pa=srilakshmikirana@okicici&pn=Sri%20Lakshmi%20Kirana&am=4150.00&cu=INR",
+        short_url="https://rzp.io/i/kka-geetha",
+        upi_intent_uri="upi://pay?pa=kiranakhata@okicici&pn=Kirana%20Khata%20Agent&am=4150.00&cu=INR",
         amount_requested=4150.0,
         amount_paid=0.0,
         status="sent",
@@ -242,8 +242,8 @@ def seed_database_if_empty(db: Session) -> None:
     plink_basavaraj = PaymentLink(
         link_code="plink_mock_basava01",
         customer_id=basavaraj.id,
-        short_url="https://rzp.io/i/slks-basava",
-        upi_intent_uri="upi://pay?pa=srilakshmikirana@okicici&pn=Sri%20Lakshmi%20Kirana&am=920.00&cu=INR",
+        short_url="https://rzp.io/i/kka-basava",
+        upi_intent_uri="upi://pay?pa=kiranakhata@okicici&pn=Kirana%20Khata%20Agent&am=920.00&cu=INR",
         amount_requested=920.0,
         amount_paid=0.0,
         status="sent",
@@ -520,7 +520,7 @@ def seed_database_if_empty(db: Session) -> None:
         total_estimated_cost=5696.0,
         whatsapp_draft_kn=(
             "ನಮಸ್ಕಾರ ಶಿವಕುಮಾರ್ ಅವರೆ (ಕಾವೇರಿ ಅಗ್ರೋ).\n"
-            "ಶ್ರೀ ಲಕ್ಷ್ಮೀ ಕಿರಾಣಾ ಸ್ಟೋರ್ಸ್‌ಗೆ ಇಂದು ಈ ಸ್ಟಾಕ್ ಕಳಿಸಿ:\n"
+            "ಕಿರಾಣಾ ಖಾತಾ ಏಜೆಂಟ್‌ಗೆ ಇಂದು ಈ ಸ್ಟಾಕ್ ಕಳಿಸಿ:\n"
             "• ಆಶೀರ್ವಾದ್ ಗೋಧಿ ಹಿಟ್ಟು 5 ಕೆಜಿ: 12 bag\n"
             "• ಸೋನಾ ಮಸೂರಿ ಅಕ್ಕಿ 1 ಕೆಜಿ: 50 kg\n"
             "ದಯವಿಟ್ಟು ಬಿಲ್ ಜೊತೆ ಕಳಿಸಿ."

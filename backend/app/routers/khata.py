@@ -112,7 +112,7 @@ def get_overdue_queue(db: Session = Depends(get_db)):
             .order_by(PaymentLink.created_at.desc())
             .first()
         )
-        short_url = active_link.short_url if active_link else f"https://rzp.io/i/slks-{c.code}"
+        short_url = active_link.short_url if active_link else f"https://rzp.io/i/kka-{c.code}"
         kn_preview, en_preview, risk = build_reminder_copy(c, stage, short_url)
         queue.append(
             {

@@ -332,7 +332,7 @@ def test_store_settings_auth_and_one_click_order_reply(client, db_session):
     # Read & update store name and owner name
     s_get = client.get("/api/settings")
     assert s_get.status_code == 200
-    assert s_get.json()["shop_name"] == "Sri Lakshmi Kirana Stores"
+    assert s_get.json()["shop_name"] == "Kirana Khata Agent"
 
     s_put = client.put(
         "/api/settings",

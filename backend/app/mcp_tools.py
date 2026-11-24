@@ -32,7 +32,7 @@ from app.services.workflow import (
 mcp = MCPServer(
     "kirana-khata-agent",
     instructions=(
-        "Kirana Khata Agent MCP Server for Sri Lakshmi Kirana Stores. "
+        "Kirana Khata Agent MCP Server. "
         "All write, khata, inventory, and WhatsApp send tools strictly enforce owner approval gating."
     ),
 )

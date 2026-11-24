@@ -14,8 +14,8 @@ class Settings(BaseSettings):
     )
 
     app_mode: str = "demo"
-    shop_name: str = "Sri Lakshmi Kirana Stores"
-    shop_name_kn: str = "ಶ್ರೀ ಲಕ್ಷ್ಮೀ ಕಿರಾಣಾ ಸ್ಟೋರ್ಸ್"
+    shop_name: str = "Kirana Khata Agent"
+    shop_name_kn: str = "ಕಿರಾಣಾ ಖಾತಾ ಏಜೆಂಟ್"
     owner_name: str = "Manjunath Gowda"
 
     # Supports SQLite locally and PostgreSQL/Supabase in production

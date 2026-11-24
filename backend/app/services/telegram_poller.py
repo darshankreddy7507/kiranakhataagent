@@ -69,8 +69,8 @@ def process_telegram_update(db: Session, update: dict[str, Any]) -> dict[str, An
                 adapters = build_adapters()
                 adapters.telegram.send_message(
                     f"tg:{chat_id}",
-                    "ನಮಸ್ಕಾರ! ಶ್ರೀ ಲಕ್ಷ್ಮೀ ಕಿರಾಣಾ ಸ್ಟೋರ್ಸ್‌ಗೆ ಸ್ವಾಗತ.\n"
-                    "Namaskara! Welcome to Sri Lakshmi Kirana Stores. "
+                    "ನಮಸ್ಕಾರ! ಕಿರಾಣಾ ಖಾತಾ ಏಜೆಂಟ್‌ಗೆ ಸ್ವಾಗತ.\n"
+                    "Namaskara! Welcome to Kirana Khata Agent. "
                     "Send your grocery order in Kannada or English (e.g. '2 kg sakkare mattu 1 litre enne kodi. Khatege haaki.').",
                 )
             except Exception as exc:

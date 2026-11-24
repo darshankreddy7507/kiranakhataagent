@@ -44,11 +44,11 @@ const DEFAULT_NOTIFS: NotificationSummary = {
 };
 
 const DEFAULT_SETTINGS: ShopSettings = {
-  shop_name: "Sri Lakshmi Kirana Stores",
-  shop_name_kn: "ಶ್ರೀ ಲಕ್ಷ್ಮೀ ಕಿರಾಣಾ ಸ್ಟೋರ್ಸ್",
+  shop_name: "Kirana Khata Agent",
+  shop_name_kn: "ಕಿರಾಣಾ ಖಾತಾ ಏಜೆಂಟ್",
   owner_name: "Manjunath Gowda",
   owner_phone: "+91 98450 11223",
-  upi_id: "srilakshmikirana@okicici",
+  upi_id: "kiranakhata@okicici",
   default_credit_limit: 3000,
   telegram_connected: false,
 };

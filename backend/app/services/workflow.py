@@ -93,7 +93,7 @@ def build_reminder_copy(customer: Customer, stage: int, short_url: str) -> tuple
         kn = (
             f"Namaskara {customer.name} avare. Nimma angadi khateyalli ₹{amt:,} baki ide. "
             f"Dayavittu saadhyavadashTu bega UPI link ({short_url}) mulaka payment maadi. "
-            f"- Sri Lakshmi Kirana Stores"
+            f"- Kirana Khata Agent"
         )
         en = (
             f"Gentle Stage 1 reminder: Namaskara {customer.name}, ₹{amt:,} is pending in your kirana khata. "
@@ -306,7 +306,7 @@ def simulate_payment_received_workflow(
     if new_balance > 0:
         kn_thanks = (
             f"ಧನ್ಯವಾದಗಳು {customer.name_kn} ಅವರೆ! ₹{int(applied):,} UPI ಪಾವತಿ ತಲುಪಿದೆ. "
-            f"ನಿಮ್ಮ ಖಾತೆಯ ಉಳಿದ ಬಾಕಿ ₹{int(new_balance):,} ಆಗಿದೆ. - ಶ್ರೀ ಲಕ್ಷ್ಮೀ ಕಿರಾಣಾ ಸ್ಟೋರ್ಸ್."
+            f"ನಿಮ್ಮ ಖಾತೆಯ ಉಳಿದ ಬಾಕಿ ₹{int(new_balance):,} ಆಗಿದೆ. - ಕಿರಾಣಾ ಖಾತಾ ಏಜೆಂಟ್."
         )
         en_thanks = (
             f"Thank you {customer.name}! Received partial UPI payment of ₹{int(applied):,}. "
@@ -315,7 +315,7 @@ def simulate_payment_received_workflow(
     else:
         kn_thanks = (
             f"ಧನ್ಯವಾದಗಳು {customer.name_kn} ಅವರೆ! ₹{int(applied):,} ಪೂರ್ಣ UPI ಪಾವತಿ ತಲುಪಿದೆ. "
-            f"ನಿಮ್ಮ ಖಾತೆ ಬಾಕಿ ₹0 ಆಗಿದೆ. - ಶ್ರೀ ಲಕ್ಷ್ಮೀ ಕಿರಾಣಾ ಸ್ಟೋರ್ಸ್."
+            f"ನಿಮ್ಮ ಖಾತೆ ಬಾಕಿ ₹0 ಆಗಿದೆ. - ಕಿರಾಣಾ ಖಾತಾ ಏಜೆಂಟ್."
         )
         en_thanks = (
             f"Thank you {customer.name}! Received full UPI payment of ₹{int(applied):,}. "
@@ -763,11 +763,11 @@ def create_supplier_reorder_draft_workflow(
 
     draft_kn = whatsapp_draft_kn or (
         f"ನಮಸ್ಕಾರ {supplier.contact_person} ಅವರೆ ({supplier.name_kn}).\n"
-        f"ಶ್ರೀ ಲಕ್ಷ್ಮೀ ಕಿರಾಣಾ ಸ್ಟೋರ್ಸ್‌ಗೆ ಈ ಕೆಳಗಿನ ಸ್ಟಾಕ್ ಕಳಿಸಿ:\n{lines_kn}\n"
+        f"ಕಿರಾಣಾ ಖಾತಾ ಏಜೆಂಟ್‌ಗೆ ಈ ಕೆಳಗಿನ ಸ್ಟಾಕ್ ಕಳಿಸಿ:\n{lines_kn}\n"
         f"ದಯವಿಟ್ಟು ಬಿಲ್ ಜೊತೆ ಇಂದು ಸಂಜೆ ಒಳಗೆ ತಲುಪಿಸಿ."
     )
     draft_en = (
-        f"Namaskara {supplier.contact_person} ({supplier.name}). Please supply for Sri Lakshmi Kirana Stores: "
+        f"Namaskara {supplier.contact_person} ({supplier.name}). Please supply for Kirana Khata Agent: "
         f"{lines_en}. Estimated total ₹{int(total_cost):,}."
     )
 
@@ -961,8 +961,8 @@ def generate_daily_summary_workflow(db: Session, *, persist: bool = True) -> Dai
     low_stock_names_kn = ", ".join(p["name_kn"] for p in low_stock_items[:4]) or "ಎಲ್ಲಾ ಸ್ಟಾಕ್ ಇದೆ"
 
     shop_row = db.query(ShopSettings).first()
-    shop_en = shop_row.shop_name if shop_row else "Sri Lakshmi Kirana Stores"
-    shop_kn = shop_row.shop_name_kn if shop_row else "ಶ್ರೀ ಲಕ್ಷ್ಮೀ ಕಿರಾಣಾ ಸ್ಟೋರ್ಸ್"
+    shop_en = shop_row.shop_name if shop_row else "Kirana Khata Agent"
+    shop_kn = shop_row.shop_name_kn if shop_row else "ಕಿರಾಣಾ ಖಾತಾ ಏಜೆಂಟ್"
     owner_first = (shop_row.owner_name if shop_row else "Manjunath").split()[0]
 
     text_en = (

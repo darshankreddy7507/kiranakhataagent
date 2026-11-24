@@ -273,11 +273,11 @@ def parse_whatsapp_order_message(
         pay_en = "added to your khata" if payment_intent == "credit" else "billed via cash/UPI"
         draft_kn = (
             f"ನಮಸ್ಕಾರ {customer.name_kn} ಅವರೆ. ನಿಮ್ಮ ಆರ್ಡರ್ ({item_summary_kn}) ದೃಢೀಕರಿಸಲಾಗಿದೆ. "
-            f"ಒಟ್ಟು ಮೊತ್ತ ₹{int(total_amount):,} {pay_kn}. ಧನ್ಯವಾದಗಳು - ಶ್ರೀ ಲಕ್ಷ್ಮೀ ಕಿರಾಣಾ ಸ್ಟೋರ್ಸ್."
+            f"ಒಟ್ಟು ಮೊತ್ತ ₹{int(total_amount):,} {pay_kn}. ಧನ್ಯವಾದಗಳು - ಕಿರಾಣಾ ಖಾತಾ ಏಜೆಂಟ್."
         )
         draft_en = (
             f"Namaskara {customer.name}. Your order ({item_summary_en}) for ₹{int(total_amount):,} "
-            f"has been confirmed and {pay_en}. Thank you - Sri Lakshmi Kirana Stores."
+            f"has been confirmed and {pay_en}. Thank you - Kirana Khata Agent."
         )
         suggested_action = "Approve order fulfillment, update stock & khata, and send Kannada WhatsApp confirmation"
         status = "pending_approval"
