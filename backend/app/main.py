@@ -1,6 +1,7 @@
 """FastAPI application entrypoint for Kirana Khata Agent."""
 
 import asyncio
+import os
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -11,12 +12,26 @@ from app.routers import approvals, dashboard, inventory, khata, orders, settings
 from app.seed import seed_database_if_empty
 from app.services.telegram_poller import telegram_polling_loop
 
+_db_initialized = False
 
-@asynccontextmanager
-async def lifespan(_app: FastAPI):
+
+def ensure_db_initialized() -> None:
+    global _db_initialized
+    if _db_initialized:
+        return
     Base.metadata.create_all(bind=engine)
     with SessionLocal() as db:
         seed_database_if_empty(db)
+    _db_initialized = True
+
+
+@asynccontextmanager
+async def lifespan(_app: FastAPI):
+    ensure_db_initialized()
+    # Long-polling runs only on persistent local/server processes, not Vercel serverless
+    if os.environ.get("VERCEL"):
+        yield
+        return
     tg_task = asyncio.create_task(telegram_polling_loop())
     try:
         yield
@@ -64,6 +79,9 @@ app.include_router(approvals.router)
 app.include_router(voice.router)
 app.include_router(webhooks.router)
 app.include_router(settings_router.router)
+
+if os.environ.get("VERCEL"):
+    ensure_db_initialized()
 
 
 @app.get("/health")

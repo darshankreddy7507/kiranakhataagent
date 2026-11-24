@@ -1,5 +1,6 @@
 """SQLAlchemy database setup compatible with SQLite (demo) and PostgreSQL/Supabase."""
 
+import os
 from collections.abc import Generator
 from sqlalchemy import create_engine
 from sqlalchemy.orm import DeclarativeBase, Session, sessionmaker
@@ -14,6 +15,9 @@ class Base(DeclarativeBase):
 def _build_engine():
     settings = get_settings()
     url = settings.database_url
+    # Vercel serverless filesystem is read-only outside /tmp
+    if os.environ.get("VERCEL") and url == "sqlite:///./kirana_khata.db":
+        url = "sqlite:////tmp/kirana_khata.db"
     connect_args = {"check_same_thread": False} if url.startswith("sqlite") else {}
     return create_engine(url, connect_args=connect_args, pool_pre_ping=True)
 
